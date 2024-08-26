@@ -1,4 +1,8 @@
 
+// The for loop is used when the number of iterations is known.
+// The while loop is used when the number of iterations is unknown.
+
+
 let index = 0
 // while (index <= 10) {
 //     console.log(`Value of index is ${index}`);
@@ -13,8 +17,8 @@ while (arr < myArray.length) {
     arr = arr + 1
 }
 
-let score = 11
-
+// +++ In do-while loop at least run once
+let score = 2
 do {
     console.log(`Score is ${score}`);
     score++

@@ -1,28 +1,56 @@
-// const coding = ["js", "ruby", "java", "python", "cpp"]
+
+const coding = ["js", "ruby", "java", "python", "cpp"]
+
+// ++++ if we return in forEach loop it wont return anything if we try to return it and stored it in values
+// ++++ will get undefined 
+const values = coding.forEach( (item) => {
+    //console.log(item);
+    return item
+} )
+ 
+console.log(values);                               // undefined
 
 
-// const values = coding.forEach( (item) => {
-//     //console.log(item);
-//     return item
-// } )
 
-// console.log(values);
+// ++++ filter  -- filter returns the values
 
 const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-// const newNums = myNums.filter( (num) => {
-//     return num > 4
-// } )
+// this is normal way of using filter functions
+const newVal = myNums.filter( (num) =>  num > 4 )
 
-// const newNums = []
+console.log(newVal)                               // [ 5, 6, 7, 8, 9, 10 ]
 
-// myNums.forEach( (num) => {
-//     if (num > 4) {
-//         newNums.push(num)
-//     }
-// } )
+// ++++ but if we try to add block scope here or use array functions as fallback function
+// in filter will get [] array as per below. this is becuase of explicit return as we discussed 
+// in 03_basics -> 03_arrow how arrow function works with () and with {}
 
-// console.log(newNums);
+const newVal1 = myNums.filter( (num) => {
+   num > 4
+} )
+
+console.log(newVal1)                             // []
+
+
+// +++ if we want to return the value then we have to add return keyword
+const newVal2 = myNums.filter( (num) => {
+  return num > 4
+} )
+
+console.log(newVal2)                             // [ 5, 6, 7, 8, 9, 10 ]
+
+
+
+// ++++ we can also do this with forEach as per below instead of using filter
+const newNums = []
+
+myNums.forEach( (num) => {
+    if (num > 4) {
+        newNums.push(num)
+    }
+} )
+
+console.log(newNums);                            // [ 5, 6, 7, 8, 9, 10 ]
 
 
 const books = [
@@ -37,9 +65,9 @@ const books = [
     { title: 'Book Nine', genre: 'Non-Fiction', publish: 1981, edition: 1989 },
   ];
 
-  let userBooks = books.filter( (bk) => bk.genre === 'History')
+let userBooks = books.filter( (bk) => bk.genre === 'History')
 
-  userBooks = books.filter( (bk) => { 
+userBooks = books.filter( (bk) => { 
     return bk.publish >= 1995 && bk.genre === "History"
 })
-  console.log(userBooks);
+console.log(userBooks);

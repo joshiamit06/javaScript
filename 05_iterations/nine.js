@@ -1,3 +1,22 @@
+// reduce -  same as python reduce only syntax is different.
+// here accumulator is the initial value that we are passing next time it will take accumulator 
+// as current value for next iteration
+const array1 = [1, 2, 3, 4];
+
+// 0 + 1 + 2 + 3 + 4
+const initialValue = 0;
+const sumWithInitial = array1.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  initialValue,
+);
+
+console.log(sumWithInitial);
+// Expected output: 10
+
+
+
+
+
 const myNums = [1, 2, 3]
 
 // const myTotal = myNums.reduce(function (acc, currval) {
@@ -7,7 +26,7 @@ const myNums = [1, 2, 3]
 
 const myTotal = myNums.reduce( (acc, curr) => acc+curr, 0)
 
-console.log(myTotal);
+console.log(myTotal);                                        // 6
 
 
 const shoppingCart = [
@@ -31,4 +50,4 @@ const shoppingCart = [
 
 const priceToPay = shoppingCart.reduce((acc, item) => acc + item.price, 0)
 
-console.log(priceToPay);
+console.log(priceToPay);                               // 22996
