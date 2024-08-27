@@ -21,7 +21,7 @@ const user = {
 // +++ browser has global object i.e. window. 
 // +++ so doing  console.log(this) on browser it returns Window obj
 // +++ but in IDE there is no global context so it returns an empty obj
-// console.log(this);                       // {} // we are in node env so it refers to an empty obj, as there is no global context
+// console.log(this);                  // {} // we are in node env so it refers to an empty obj, as there is no global context
 
 
 // +++ when we print this inside the function it returns object which contains some defualt values, performance values etc

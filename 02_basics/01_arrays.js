@@ -1,9 +1,11 @@
-// array
-// Similar to list in Python
+```
+Array :
+Similar to list in Python
+Arrays are resizable, can contain different datatypes, array elements can not be accessed using
+arbitiary string. can be accessed using indices only.
+When we create copy of array it creates shallow copy 
 
-// Arrays are resizable, can contain different datatypes, arrat elements can not be accessed using
-// arbitiary string. can be accessed using indices only.
-// When we create copy of array it creates shallow copy 
+```
 
 // ++ different ways of declaring Arrays
 
@@ -23,6 +25,7 @@ const myArr = [0, 1, 2, 3, 4, 5]
 
 // myArr.pop()                       // remove last element in array. similar to list.pop() in python.
 // console.log(myArr);               // [1,2,3,4,5,6]
+                                // it return the removed value i.e. if we do console.log(myArr.pop()) will get 6. same to python
 
 
 // myArr.unshift(9)                  // add any element at the start of array. similar to list.insert(0, 6)
@@ -33,8 +36,8 @@ const myArr = [0, 1, 2, 3, 4, 5]
 // myArr.shift()                    // to remove first element in array. similar to list.pop(0) in python
 // console.log(myArr)               // [1,2,3,4,5,6]
 
-// console.log(myArr.includes(9));  // false
-// console.log(myArr.indexOf(3));   // 3
+// console.log(myArr.includes(9));  // false // in python print(9 in my_list)
+// console.log(myArr.indexOf(3));   // 3     // print(my_list.index(3))
 // console.log(myArr.indexOf(98));  // -1   // gives -1 when ele is not present in array
 
 // const newArr = myArr.join()      // convert array into string

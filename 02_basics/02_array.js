@@ -11,7 +11,7 @@ const dc_heros = ["superman", "flash", "batman"]
 //#######
 // +++ concat() is used to merge two arrays in JS, similar to  li.extend(li2) in Python
 // But here concat() returns new array but in Python extends() will add second list in first list.
-// will not return new list
+// will not return new list, also in python .concat() function in used to merge two dicts.
 const allHeros = marvel_heros.concat(dc_heros)    
 console.log(allHeros);                         // [ 'thor', 'Ironman', 'spiderman', 'superman', 'flash', 'batman' ]
 

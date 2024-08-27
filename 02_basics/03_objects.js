@@ -1,9 +1,11 @@
-// singleton
-// Object.create // This is way of creating object using constructor.
+```
+singleton
+Object.create // This is way of creating object using constructor.
 
-// Two ways of declaring the objects. By literals and by constructors.
-// whenever you create objects by constructors it creates singleton object
-// and objects created by using literals are not singleton object.
+Two ways of declaring the objects. By literals and by constructors.
+whenever you create objects by constructors it creates singleton object
+and objects created by using literals are not singleton object.
+```
 
 // object using literals
 
