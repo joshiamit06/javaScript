@@ -54,3 +54,5 @@ myCoding.forEach( (item) => {
                                                     // java
                                                     // python
 } )
+
+// Note that forEach loop wont return anything.

@@ -62,3 +62,14 @@ map.set('IN', "India")
 for (const key in map) {
     console.log(key);                  // 
 }
+
+
+
+```
+
+Array, Map => for-of loop
+Object => for-in loop
+Array with for-in loop => index values
+Map with for-in loop => wont return anything. as map is not iterable.
+
+```
