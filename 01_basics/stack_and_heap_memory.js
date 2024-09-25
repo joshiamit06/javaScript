@@ -3,7 +3,7 @@
 //For all Primitive datatypes Stack memory will gets used
 //For all non primitive datatypes Heap memory will gets used.
 
-//In stack memory, whenever we declare any variable and if assigned it to new variable will get copy of value
+//In stack, whenever we declare any variable and if assigned it to new variable will get copy of value
 // If we declare anything in heap memory will its gets its reference
 
 let str1 = "first"

@@ -4,6 +4,9 @@
 // undefined is variable is declared, memory space is assigned but it is yet to be defined.
 // null doesnt mean that its has 0 value. null means it is empty.
 
+// undefined means a variable has been declared but has not yet been assigned a value,
+// whereas null is an assignment value, means variable has been declared and given the value of null .
+
 const score = 100
 const scoreValue = 100.3
 

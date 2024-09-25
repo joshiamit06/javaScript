@@ -1,12 +1,11 @@
 let val = "30"
-let InNumber = Number(score)
 //console.log(typeof InNumber); // number // to convert string into numbers
 //console.log(typeof(InNumber)); // number
 
 let score = "hitesh"
 let valueInNumber = Number(score)
-//console.log(typeof valueInNumber);
-//console.log(valueInNumber);
+// console.log(typeof valueInNumber);   //number
+// console.log(valueInNumber);         //NaN
 
 
 // "33" => 33
@@ -18,7 +17,7 @@ let valueInNumber = Number(score)
 let isLoggedIn = "hitesh"
 
 let booleanIsLoggedIn = Boolean(isLoggedIn)
-//  console.log(booleanIsLoggedIn);
+//  console.log(booleanIsLoggedIn);             // true
 
 // 1 => true; 0 => false
 // "" => false
