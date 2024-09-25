@@ -9,37 +9,131 @@
     <h2>Amazing image</h2>
     <div >
         <ul id="images">
-            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
-            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
-            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
-            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
-            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="photoshop"
+                    src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt="photoshop"></li>
+            <li><img width="200px" id="japan"
+                    src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+            <li><img width="200px" id="river"
+                    src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+            <li><img width="200px" id="owl"
+                    src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+            <li><img width="200px" id="prayer"
+                    src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
             <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
         </ul>
    </div>
 </body>
 <script>
-    // document.getElementById('owl').onclick = function(){
-    //     alert("owl clicked")
-    // }
+    ```
+    In Js events run sequentially as JS is sequentially running language. Some exceptions are there
+    such as browser events, which gets activated with an activity such as click, mouse over
+    if we dont do that activity it will not run.
+    we can also add browser events in html tag as we have added in owl tag such as
+    this  is mostly used but this is not feasible approach avoid this
+    <li><img width="200px" id="owl"
+                    src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt="" 
+                    onclick="alert('owl')"
+    ></li>
 
-     // attachEvent()
+
+    Second approach of adding event is
+        document.getElementById('owl').onclick = function(){
+        alert("owl clicked")
+     }
+    
+    But most preferable approach is using event listeners coz it gives propogation ability
+
+    document.getElementById('images').addEventListener('click', function(e){
+        console.log("clicked inside the ul");
+    }, false)
+    ```
+    //#### attachEvent() and jQuery were also used to add event to web pages in pasts
+    // attachEvent()
     // jQuery - on
+
+
+    ```whenever we are listening an event to an web element will get an event "e" which we
+    passing it inside the function. it hasseveral properties run below code and see event
+    propoerties in console.```
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log(e);
+    // }, false)
+
+    //#### below are important event properties as per interview. gone through it once
 
     // type, timestamp, defaultPrevented
     // target, toElement, srcElement, currentTarget,
     // clientX, clientY, screenX, screenY
     // altkey, ctrlkey, shiftkey, keyCode
+    
 
+    ```
+    Third parameter in addEventListener function is for event propogation
+    two types of event propogation 
+    1. event bubbling
+    2. event capturing
+
+    default is event bubbling and default value of event propogation is false.
+    so by default in addEventListener function we are using event bubbling
+    ```
+    ``` this will print "clicked inside the ul" when we clik inside images tag
+    or any images as image tag contain several li```
     // document.getElementById('images').addEventListener('click', function(e){
     //     console.log("clicked inside the ul");
     // }, false)
 
+    ``` this will print "owl clicked" when we click inside the owl image.
+    but here note that owl is also inside the image tag. so after clicking on owl
+    "clicked inside the ul" event should also gets activated
+    so which event gets printed/activated first
+    
+    we provided false value it means it is using event bubbling so first owl event gets activated
+    and then "image event/"clicked inside the ul" gets activated 
+    ```
     // document.getElementById('owl').addEventListener('click', function(e){
     //     console.log("owl clicked");
     //     e.stopPropagation()
     // }, false)
-    
+
+
+    ```
+    if we want to use capturing event i.e. when clicked on owl image event gets activated first 
+    amd then owl event then we can pass true value for event propogation
+    ```
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the ul");
+    // }, true)
+
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("owl clicked");
+    //     e.stopPropagation()
+    // }, true)
+
+
+    ```
+    but sometimes we want to stop the propogation of event
+    meaning clicking on owl here if any other event is getting activated 
+    we want to stop its propogation further
+    then we can use e.stopPropagation()
+    ```
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.stopPropagation()
+    //     console.log("google clicked");
+    // }, false)
+
+    ```
+        To understand preventDefault() we have one google.com link
+        if we want when we click on google we dont want to naviagte to google.com link
+        then we can use preventDefault() to prevent its default behavior
+
+    ```
     // document.getElementById('google').addEventListener('click',function(e){
     //     e.preventDefault();
     //     e.stopPropagation()
