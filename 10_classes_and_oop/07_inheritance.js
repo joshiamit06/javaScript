@@ -22,9 +22,9 @@ class Teacher extends User{
 
 const chai = new Teacher("chai", "chai@teacher.com", "123")
 
-chai.logMe()
+chai.logMe()  // can access logMe() from chai as it is inherited
 const masalaChai = new User("masalaChai")
 
 masalaChai.logMe()
 
-console.log(chai instanceof User);
+console.log(chai instanceof User);  // true

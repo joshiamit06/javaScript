@@ -11,30 +11,31 @@
 </body>
 
     <script>
-    // function init() {
-    //     let name = "Mozilla"; 
-    //     function displayName() {
-    //         console.log(name); 
-    //     }
-    //     displayName();
-    // }
-    // init();
+        function init() {
+            let name = "Mozilla"; 
+            function displayName() {
+                console.log(name); 
+            }
+            displayName();
+        }
+        init();
 
-    // function outer(){
-    //     let username = "hitesh"
-    //     console.log("OUTER", secret);
-    //     function inner(){
-    //         let secret = "my123"
-    //         console.log("inner", username);
-    //     }
-    //     function innerTwo(){
-    //         console.log("innerTwo", username);
-    //         console.log(secret);
-    //     }
-    //     inner()
-    //     innerTwo()
+    function outer(){
+        let username = "hitesh"
+        console.log("OUTER", secret);
+        function inner(){
+            let secret = "my123"
+            console.log("inner", username);
+        }
+        function innerTwo(){
+            console.log("innerTwo", username);
+            console.log(secret);         // secret not found // as secret is defined in another 
+                                         // function not in innerTwo function's parent function.       
+        }
+        inner()
+        innerTwo()
 
-    // }
+    }
     // outer()
     // console.log("TOO OUTER", username);
 
