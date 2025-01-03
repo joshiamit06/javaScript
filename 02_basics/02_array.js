@@ -18,6 +18,9 @@ console.log(allHeros);                         // [ 'thor', 'Ironman', 'spiderma
 
 // +++ another way to merge two arrays in third array with spread operator ...
 const all_new_heros = [...marvel_heros, ...dc_heros]
+
+// In python we can achieve above thing is with * operator
+// all_new_heros = [*marvel_heros, *dc_heros]
  
 // console.log(all_new_heros);    // [ 'thor', 'Ironman', 'spiderman', 'superman', 'flash', 'batman' ]
 

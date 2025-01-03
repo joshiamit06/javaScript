@@ -6,6 +6,8 @@
 
 // undefined means a variable has been declared but has not yet been assigned a value,
 // whereas null is an assignment value, means variable has been declared and given the value of null .
+// and let val = "" it means variable is declared memory space is assigned and it has given blank string value
+// "" it means giving empty string value
 
 const score = 100
 const scoreValue = 100.3

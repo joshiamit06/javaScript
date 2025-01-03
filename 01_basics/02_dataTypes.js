@@ -17,3 +17,6 @@ let st = null
 
 console.log(typeof undefined); // undefined
 console.log(typeof null); // object
+
+// To check type in python use
+// type(st)

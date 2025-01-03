@@ -9,10 +9,10 @@ console.log(typeof balance)      // object
 
 //+++ convert number into string
 
-//balance.toString()
-
-
-// console.log(balance.toString().length);
+//balance.toString()          // In Python - str(balance)   - convert no into string
+                              // In Python - int(val)       - convert string into num
+ 
+// console.log(balance.toString().length);    // In python - len(str)  - to find length of string
 
 // +++ To get a precision value after decimal point in float
 
