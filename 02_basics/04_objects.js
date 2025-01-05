@@ -63,11 +63,17 @@ users[1].email
 
 // +++ To get all keys from the object. Note that it returns an array of keys.  
 console.log(Object.keys(tinderUser));                  // [ 'id', 'name', 'isLoggedIn' ]
+// In python - obj.keys()   - to get all keys of an object
+
+
 // +++ To get all values from object. Note that it returns an array of values.
 console.log(Object.values(tinderUser));                // [ '123abc', 'Sammy', false ]
+// In python - obj.values()  - to get all values of an object
+
+
 // +++ .entries() will converts key and values in a array as per below
 console.log(Object.entries(tinderUser));               // [ [ 'id', '123abc' ], [ 'name', 'Sammy' ], [ 'isLoggedIn', false ] ]
-
+// In python - obj.items()   - it returns list of tuples as per below - dict_items([('name', 'sammy'), ('age', 32), ('class', 'first')])
 
 // +++ To check if any key exists in an object
 console.log(tinderUser.hasOwnProperty('isLoggedIn'));     // true

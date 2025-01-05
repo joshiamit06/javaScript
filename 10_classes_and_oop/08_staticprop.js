@@ -5,11 +5,16 @@ they are called on the class itself. Static methods are often utility functions
 that don’t require an instance of the class to operate on.
 
 Key Characteristics of Static Methods:
-Belong to the class, not the instance: You can only call them using the class name, not through an instance of the class.
-Cannot access instance properties: Static methods cannot access or modify instance properties (non-static data) of a class unless they receive an instance as an argument.
-Used for utility functions: They are useful for creating utility methods related to the class, such as calculations, transformations, or validations that don’t need to interact with instance-specific data.
+Belong to the class, not the instance: You can only call them using the class name, not through an
+instance of the class.
+Cannot access instance properties: Static methods cannot access or modify instance properties
+(non-static data) of a class unless they receive an instance as an argument.
+Used for utility functions: They are useful for creating utility methods related to the class,
+such as calculations, transformations, or validations that don’t need to interact with 
+instance-specific data.
 
-Let’s say you want to create a class MathHelper with a utility function for adding two numbers, but you don’t want to create an instance of MathHelper every time:
+Let’s say you want to create a class MathHelper with a utility function for adding two numbers, 
+but you don’t want to create an instance of MathHelper every time:
 
 class MathHelper {
   static add(a, b) {
@@ -44,7 +49,10 @@ console.log(DateUtils.getCurrentDate()); // Output will be the current date in Y
 
 In this example:
 
-isLeapYear and getCurrentDate are both static methods because they perform operations that don’t depend on any particular instance of DateUtils. They are utility functions that are logically related to date operations, so you call them directly on the class (DateUtils) without needing to instantiate it.
+isLeapYear and getCurrentDate are both static methods because they perform operations that 
+don’t depend on any particular instance of DateUtils. 
+They are utility functions that are logically related to date operations, 
+so you call them directly on the class (DateUtils) without needing to instantiate it.
 
 ```
 

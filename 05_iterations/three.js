@@ -63,6 +63,10 @@ Map: Generally performs better for frequent additions and removals, especially w
 Object: Iteration over an object’s properties requires using for...in, Object.keys(), or Object.entries().
 Map: Easily iterable in insertion order using for...of loops, or directly with map.keys(), map.values(), and map.entries().
 
+object ===> for...in
+map ====> for...of
+
+
 // Object
 for (let key in obj) {
     console.log(key, obj[key]);

@@ -1,4 +1,4 @@
-```
+/*
 Javascript's default behavior is proto-type behavior.
 If you try to access a property or method that doesn't exist on the object itself,
 JavaScript will look for it in the object's prototype. 
@@ -9,16 +9,14 @@ The same way this keyword works in Js.
 
 Everything is js has object. so we declared string/array the prototype of String/Array redirects 
 from Object and Object prototype is redirected to null
-
-
-```
+*/
 
 
 
 // let myName = "hitesh     "
 // let mychannel = "chai     "
 
-// console.log(myName.trueLength);
+console.log(myName.trueLength);
 
 
 let myHeros = ["thor", "spiderman"]
@@ -42,14 +40,15 @@ heroPower.hitesh()    // Here hitesh() function is not available in heroPower ob
     // so we will create a prototype function in base Object  so it will gets accessible with any object
     // we are creating
 
-    ```
+/*
 So the inheritance is as per below
 
 function -------> Object -------> null
 Array ---------> Object ---------> null
 String ---------> Object --------> null
 
-```
+*/
+
 Object.prototype.hitesh = function () {
     console.log(`hitesh is present in all objects`);
 }

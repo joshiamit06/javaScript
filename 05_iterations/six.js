@@ -23,7 +23,8 @@ console.log(newVal)                               // [ 5, 6, 7, 8, 9, 10 ]
 
 // ++++ but if we try to add block scope here or use array functions as fallback function
 // in filter will get [] array as per below. this is becuase of explicit return as we discussed 
-// in 03_basics -> 03_arrow how arrow function works with () and with {}
+// in 03_basics -> 03_arrow how arrow function works with () and with {}. i.e. in {} or  () if you have 
+// to written in that block you have to write return statement explain this in next few lines
 
 const newVal1 = myNums.filter( (num) => {
    num > 4

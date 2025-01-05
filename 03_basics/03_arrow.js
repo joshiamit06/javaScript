@@ -31,6 +31,7 @@ function coffee(){
 // coffee()
 
 //++ if we try to access any variables inside fun with this. it will not work. it will work only with objects
+//this only works with an object
 function chai(){
     let username = "hitesh" 
     console.log(this.username);  // undefined
@@ -61,8 +62,9 @@ console.log(newAddTwo())         // 7
 // Arrow function with implicit return. no need to use curly brackets {} and return keyword
 const impAddTwo = (num1, num2) =>  num1 + num2
 
-// another way of writing it. here we used paranthesis (). if we wrap fun definition in curly bracket then we need to use return keyword
-// if we wrap fun definition then dont need to use return keyword.
+// another way of writing it. here we used paranthesis (). if we wrap fun definition in curly bracket
+//  then we need to use return keyword
+// if we wrap fun definition in (), then dont need to use return keyword.
 const firstaddTwo = (num1, num2) => ( num1 + num2 )
 
 // if we are returning obj with arrow function then we need to wrap obj in parenthesis ()
